@@ -11,7 +11,7 @@ pipeline {
         }
         stage('Build and Publish Docker Image'){
             steps{
-                withCredentials([string(credentialsId: 'docker', variable: 'FILE')]) {
+                withCredentials([usernamePassword(credentialsId: 'docker', variable: 'FILE')]) {
                     sh 'sudo docker build -t anshul1098/blueimage -f blue-green/blue/Dockerfile blue-green/blue'
                     sh 'sudo docker build -t anshul1098/greenimage -f blue-green/green/Dockerfile blue-green/green'
                     sh 'sudo docker push anshul1098/blueimage'
