@@ -1,7 +1,5 @@
 ## AWS Elastic Kubernetes Service - Blue Green Deployment
 
-![img-diagram](diagram/diagram_capston_nanodegree.jpeg) 
-
 In this project you will apply the skills and knowledge which were developed throughout the Cloud DevOps Nanodegree program. These include:
 
 * Working in AWS
@@ -54,4 +52,3 @@ For create your pipeline you have to add the file `Jenkinsfile` in jenkins, also
     You can see how each POD is updated to the green version incrementally
 
 ---
-**You can see the execution results in [images](https://github.com/herrera-luis/eks-blue-green-deployment/tree/master/images) folder**
