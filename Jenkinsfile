@@ -21,11 +21,5 @@ pipeline {
                 }
             }
         }
-        stage('Remove Unused docker image') {
-            steps{
-                sh 'sudo docker rmi -f anshul1098/greenimage'
-                sh 'sudo docker rmi -f anshul1098/blueimage'
-            }
-        }
     }
 }
