@@ -10,7 +10,7 @@ pipeline {
             }
         }
         stage('Build and Publish Docker Image'){
-            steps{
+            
                 docker.withRegistry('https://registry.hub.docker.com', 'docker') {
                     sh 'sudo docker build -t anshul1098/blueimage -f blue-green/blue/Dockerfile blue-green/blue'
                     sh 'sudo docker build -t anshul1098/greenimage -f blue-green/green/Dockerfile blue-green/green'
@@ -19,7 +19,7 @@ pipeline {
                     sh 'sudo docker rmi -f anshul1098/greenimage'
                     sh 'sudo docker rmi -f anshul1098/blueimage'
                 }
-            }
+            
         }
     }
 }
